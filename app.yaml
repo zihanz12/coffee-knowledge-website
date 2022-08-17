@@ -1,0 +1,19 @@
+runtime: python38 # or another supported version
+
+instance_class: F1
+
+env_variables: 
+  MYSQL_USER: 'root'
+  MYSQL_PASSWORD: '12345'
+  MYSQL_DB: 'coffeeStory'
+  MYSQL_HOST: 35.232.199.136
+
+handlers:
+- url: /img
+  static_dir: static/img
+
+- url: /script
+  static_dir: static/script
+
+- url: /styles
+  static_dir: static/styles

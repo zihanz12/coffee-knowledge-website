@@ -1,0 +1,15 @@
+__pycache__/
+.venv
+
+.ipynb_checkpoints/
+
+.DS_Store
+
+.gcloudignore
+
+.git
+.gitignore
+
+doc/
+src/
+README.md
