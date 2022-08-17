@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="{{ url_for('static', filename='img/coffee.ico') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/custom.css') }}">
+    </head>
+    <body>
+    <div class="topnav" id="myTopnav">
+        <a href="/Section" class="active">Coffee Story</a>
+        <a href="/Lab">Lab</a>
+        <a href="/Fact">Fact</a>
+        <a href="/Posts">Forum</a>
+        <a href="/Beans"><img src="/static/img/bean.png" style="width:5%"></a>
+        <a href="/logout" class="login">{{loginstatus}}</a> 
+        <p>{{nameu}}</p>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+
+    <div id="result"></div>
+    <div id="container">
+      <table border="0">
+        <tr>
+          <td></td>
+          <td><button class="img_btn search-category" value="Espresso"><img src="/static/img/category/espresso.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Double Espresso"><img src="/static/img/category/double_espresso.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Red Eye"><img src="/static/img/category/red_eye.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Black Eye"><img src="/static/img/category/black_eye.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Americano"><img src="/static/img/category/americano.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Long Black"><img src="/static/img/category/long_black.png" style="width:100%"></button></td>
+        </tr>
+        <tr>
+          <td><img src="/static/img/lab.png" style="width:80%"></td>
+          <td><button class="img_btn search-category" value="Macchiato"><img src="/static/img/category/macchiato.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Long Macchiato"><img src="/static/img/category/long_macchiato.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Cortado"><img src="/static/img/category/cortado.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Breve"><img src="/static/img/category/breve.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Cappuccino"><img src="/static/img/category/cappuccino.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Flat White"><img src="/static/img/category/flat_white.png" style="width:100%"></button></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button class="img_btn search-category" value="Cafe Latte"><img src="/static/img/category/cafe_latte.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Mocha"><img src="/static/img/category/mocha.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Vienna"><img src="/static/img/category/vienna.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Affogato"><img src="/static/img/category/affogato.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Cafe au Lait"><img src="/static/img/category/cafe_au_lait.png" style="width:100%"></button></td>
+          <td><button class="img_btn search-category" value="Iced Coffee"><img src="/static/img/category/iced_coffee.png" style="width:100%"></button></td>
+        </tr>
+      </table>
+    </div>
+
+
+    <footer class="footer">
+      <div class="container">
+            <p class="text-muted"><small>App developed for CS411 UIUC by <a href="https://github.com/cs411-su22/su22-cs411-team021-aplusright">Team-021: A+right</a></small></p>
+      </div>
+    </footer>
+  </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='script/modal.js') }}"></script>
+
+</html>

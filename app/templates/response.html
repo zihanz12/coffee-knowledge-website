@@ -1,0 +1,30 @@
+<table class="table">
+    <thead>
+        <h>{{numrows}} Records Found</h> 
+    <tr>
+        <!--<a href="/Posts">Posts</a>-->
+        
+        <th class="task-id">PostId</th>
+        <th class="task">PostContent</th>
+        <th class="status">UserName</th>
+        <th class="status">PostDate</th>
+        <!--<th class="SeeMore">More</th>-->
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for item in items %}
+        <tr>
+            <td>{{item.PostId}}</td>
+            <td>{{item.PostContent}}</td>
+            <td>{{item.UserName}}</td>
+            <td>{{item.PostDate}}</td>
+            
+            <!--<td><button class="btn btn-outline-secondary btn-sm"data-source="{{item.PostId}}" button id="SeeMore" type="button"><i class="fa fa-apple fa-1" aria-hidden="true"></i></button></td>-->
+        </tr>
+    {% endfor %}
+    </tbody>
+      
+    <script src="{{ url_for('static', filename='script/modal.js') }}"></script> 
+    <!--remember to include script-->
+</table>

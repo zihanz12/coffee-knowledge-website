@@ -1,0 +1,60 @@
+<div id="parent"> 
+    <h1 style="padding: 0 1em 0 1em; font-family: cursive;">{{category}}</h1>
+    <div class="left hori_space"> 
+        <img src={{filename}} style="width:100%">
+        <table class="table">
+            <h3>Recipe</h3>
+            {% for item in recipe_result %}
+                <tr>
+                    <td style="text-align: left">Ratio:</td>
+                    <td style="text-align: left">{{item.Ratio}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Cup size:</td>
+                    <td style="text-align: left">{{item.CupSize}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div> 
+    <div class="right hori_space vert_space">
+        <table class="table spec">
+            <h3>Drinks in this category</h3>
+            {% for item in drink_result %}
+                <tr>
+                    <td style="text-align: left">[{{item.UserCount}} likes] {{item.CoffeeName}}</td>
+                    {% if item.Tag == "low calories" %}
+                        <td style="text-align: right">&#128077; Healthy choice</td>
+                    {% else %}
+                        <td></td>
+                    {%endif%}
+                </tr>
+            {% endfor %}
+        </table>
+        <table class="table spec">
+            <h3>Related posts</h3>   
+            <thead>
+            <tr>
+                <th class="task-id">PostId</th>
+                <th class="task">PostContent</th>
+                <th class="status">Author</th>
+                <th class="status"># of Views</th>
+                <th class="status">PostDate</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for item in post_result %}
+                <tr>
+                    <td>{{item.PostId}}</td>
+                    <td>{{item.PostContent}}</td>
+                    <td>{{item.Author}}</td>
+                    <td>{{item.Views}}</td>
+                    <td>{{item.PostDate}}</td>
+
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div> 
+</div> 

@@ -1,0 +1,82 @@
+<div id="parent"> 
+    <h1 style="padding: 0 1em 0 1em; font-family: cursive; text-align: left">Bean Id: {{bean_id}}</h1>
+    <div class="left hori_space"> 
+        <img src={{img_file}} style="width:100%">
+        <table class="table vert_space">
+            <h3>Farm Information</h3>
+            {% for item in farm_info %}
+                <tr>
+                    <td style="text-align: left">Farm Name:</td>
+                    <td style="text-align: left">{{item.FarmName}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Owner:</td>
+                    <td style="text-align: left">{{item.Owner}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Country of Origin:</td>
+                    <td style="text-align: left">{{item.CountryofOrigin}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Company:</td>
+                    <td style="text-align: left">{{item.Company}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Altitude:</td>
+                    <td style="text-align: left">{{item.Altitude}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Region:</td>
+                    <td style="text-align: left">{{item.Region}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div> 
+    <div class="right hori_space vert_space">
+        <table class="table">
+            <h3>Bean Statistics</h3>
+            {% for item in bean_stats %}
+                <tr>
+                    <td style="text-align: left">Aroma:</td>
+                    <td style="text-align: left">{{item.Aroma}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Flavor:</td>
+                    <td style="text-align: left">{{item.Flavor}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Aftertaste:</td>
+                    <td style="text-align: left">{{item.Aftertaste}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Acidity:</td>
+                    <td style="text-align: left">{{item.Acidity}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Body:</td>
+                    <td style="text-align: left">{{item.Body}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Balance:</td>
+                    <td style="text-align: left">{{item.Balance}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Uniformity:</td>
+                    <td style="text-align: left">{{item.Uniformity}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">CleanCup:</td>
+                    <td style="text-align: left">{{item.CleanCup}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Sweetness:</td>
+                    <td style="text-align: left">{{item.Sweetness}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Moisture:</td>
+                    <td style="text-align: left">{{item.Moisture}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div> 
+</div> 
