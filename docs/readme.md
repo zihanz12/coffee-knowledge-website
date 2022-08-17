@@ -1,6 +1,6 @@
-A one-stop information site about coffee, providing information about coffee types, ingredients and nutritional content, coffee bean varieties, etc., for all kinds of users - from novice coffee drinkers to coffee lovers. At the same time, our site will allow users to interact with the content and with each other, including searching for coffee related info, favoriting content, sharing ideas via post, and commenting on others’ posts.
+A one-stop information site about coffee, providing information about coffee types, ingredients and nutritional content, coffee bean varieties, etc., for all kinds of users - from novice coffee drinkers to coffee lovers. At the same time, users  are allowed to interact with the content and with each other, including searching for coffee related information, favoriting content, sharing ideas via post, and commenting on others’ posts.
 
-Below are screenshots of website:
+Below are few screenshots of website:
 
 ![image](https://user-images.githubusercontent.com/80549882/185031581-6c1d8981-bef6-4935-97a9-f2129ea9b7c7.png)
 
